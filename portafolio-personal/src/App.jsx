@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 import Home from './components/Home';
 import ReactProjects from './components/Projects/ReactProjects';
 import ScratchProjects from './components/Projects/ScratchProjects';
