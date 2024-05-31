@@ -1,7 +1,8 @@
 // src/App.jsx
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
-import Navbar from './components/NavBar';
+import { useSwipeable } from 'react-swipeable';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import ReactProjects from './components/Projects/ReactProjects';
 import ScratchProjects from './components/Projects/ScratchProjects';
@@ -41,8 +42,15 @@ const App = () => {
     };
   }, [navigate]);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => navigateNext(),
+    onSwipedRight: () => navigatePrevious(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   return (
-    <div>
+    <div {...handlers}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
