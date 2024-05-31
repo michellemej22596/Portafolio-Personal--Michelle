@@ -1,0 +1,67 @@
+/* src/components/Experience.css */
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+  
+  .experience-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .experience-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+  }
+  
+  .experience-dates {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-company {
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+    color: #646cff;
+  }
+  
+  .experience-position {
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-description {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  @media (max-width: 768px) {
+    .experience-container {
+      padding: 1rem;
+    }
+    
+    .experience-container h2 {
+      font-size: 2em;
+    }
+    
+    .experience-item {
+      padding: 0.5rem;
+    }
+    
+    .experience-dates,
+    .experience-company,
+    .experience-position,
+    .experience-description {
+      font-size: 1em;
+    }
+  }
+  
