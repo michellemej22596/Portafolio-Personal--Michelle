@@ -1,19 +1,15 @@
 // src/components/Home.jsx
 import React from 'react';
-import styled from 'styled-components';
-
-const HomeContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-`;
+import arrows from '../assets/arrows.png';
 
 const Home = () => (
-  <HomeContainer>
+  <div className="home-container" align= 'center'>
     <h1>Bienvenido a Mi Portafolio</h1>
-  </HomeContainer>
+    <p className="home-description">Este es un proyecto personal con el fin de darme a conocer.</p>
+    <p className="home-instructions">Puedes navegar por el portafolio con las flechas del teclado.</p>
+    <img src={arrows} alt="Flechas del teclado" className="home-arrows" />
+    <p>¡Comienza a navegar!</p>
+  </div>
 );
 
 export default Home;

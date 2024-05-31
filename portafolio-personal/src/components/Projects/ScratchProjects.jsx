@@ -1,16 +1,10 @@
-// src/components/Projects/ScratchProjects.jsx
 import React from 'react';
-import './ScratchProjects.css';
 
-const ScratchProjects = () => (
-  <div className="projects-container">
-    <h2 className="projects-title">Proyectos de Scratch</h2>
-    <iframe 
-      src="https://scratch.mit.edu/projects/1020585103/embed" 
-      className="project-frame"
-      title="Proyecto de Scratch"
-    ></iframe>
-  </div>
-);
+    const ScratchProjects= () => (
+      <div>
+        <h2>Proyectos de Scratch</h2>
+        <iframe src="https://scratch.mit.edu/projects/1020585103/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> 
+      </div>
+    );
 
-export default ScratchProjects;
+    export default ScratchProjects;

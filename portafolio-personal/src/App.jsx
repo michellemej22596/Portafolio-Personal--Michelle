@@ -1,15 +1,48 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// src/App.jsx
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import Home from './components/Home';
 import ReactProjects from './components/Projects/ReactProjects';
 import ScratchProjects from './components/Projects/ScratchProjects';
 import Experience from './components/Experience';
 import About from './components/About';
+import './index.css';
 
-function App() {
+const App = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'ArrowRight') {
+        navigateNext();
+      } else if (event.key === 'ArrowLeft') {
+        navigatePrevious();
+      }
+    };
+
+    const navigateNext = () => {
+      const paths = ['/', '/react-projects', '/scratch-projects', '/experience', '/about'];
+      const currentIndex = paths.indexOf(window.location.pathname);
+      const nextIndex = (currentIndex + 1) % paths.length;
+      navigate(paths[nextIndex]);
+    };
+
+    const navigatePrevious = () => {
+      const paths = ['/', '/react-projects', '/scratch-projects', '/experience', '/about'];
+      const currentIndex = paths.indexOf(window.location.pathname);
+      const previousIndex = (currentIndex - 1 + paths.length) % paths.length;
+      navigate(paths[previousIndex]);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [navigate]);
+
   return (
-    <Router>
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,8 +51,14 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </Router>
+    </div>
   );
-}
+};
 
-export default App;
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;

@@ -1,10 +1,14 @@
 import React from 'react';
 
     const ReactProjects = () => (
-      <div>
-        <h2>Proyectos de Scratch</h2>
-        <iframe src="https://scratch.mit.edu/projects/1020585103/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> 
+      <div class="project-card">
+      <img src="URL_DE_LA_IMAGEN" alt="Descripción de la imagen"></img>
+      <div class="project-info">
+        <h3>Nombre del Proyecto</h3>
+        <p>Breve descripción del proyecto...</p>
+        <a href="https://tiburoncin.lat/22596/react-blog/" target="_blank">Ver Proyecto</a>
+      </div>
       </div>
     );
 
-    export default ReactProjects;
+    export default ReactProjects    ;
