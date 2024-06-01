@@ -1,6 +1,7 @@
 // src/components/Experience.jsx
 import React from 'react';
 import './Experience.css';
+import Suitcase from '../assets/maletin.png';
 
 const experiences = [
   {
@@ -50,7 +51,9 @@ const additionalExperiences = [
 
 const Experience = () => (
   <div className="experience-container">
-    <h2>Experiencia Laboral</h2>
+    
+    <h2><img src={Suitcase} alt="Suitcase" className="image"/>
+    <br></br>Experiencia Laboral</h2>
     {experiences.map((exp, index) => (
       <div key={index} className="experience-item">
         <div className="experience-dates">

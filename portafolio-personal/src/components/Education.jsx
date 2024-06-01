@@ -1,6 +1,8 @@
 // src/components/EducationAndAchievements.jsx
 import React from 'react';
 import './Education.css';
+import Birrete from '../assets/birrete.png';
+import Trofeo from '../assets/trofeo.png';
 
 const educationData = [
   {
@@ -64,6 +66,7 @@ const achievementsData = [
 
 const Education = () => (
   <div className="education-achievements-container">
+    <img src={Birrete} alt="Birrete" className="image"/>
     <h2>Educación</h2>
     <div className="education-section">
       {educationData.map((edu, index) => (
@@ -82,6 +85,7 @@ const Education = () => (
     </div>
     <h2>Logros</h2>
     <div className="achievements-section">
+    <img src={Trofeo} alt="Trofeo" className="image"/>
       {achievementsData.map((achievement, index) => (
         <div key={index} className="achievement-item">
           {achievement.name} ({achievement.year})

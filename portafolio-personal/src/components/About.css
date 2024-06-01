@@ -92,3 +92,20 @@
   animation: loadSkill 2s ease-out;
 }
 
+.download-cv {
+  margin-top: 2rem;
+}
+
+.download-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2em;
+  background-color: #646cff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.download-link:hover {
+  background-color: #535bf2;
+}
