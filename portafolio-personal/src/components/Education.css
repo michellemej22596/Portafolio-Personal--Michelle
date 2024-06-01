@@ -1,0 +1,44 @@
+/* src/components/EducationAndAchievements.css */
+.education-achievements-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    text-align: center;
+  }
+  
+  .education-achievements-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .education-section, .achievements-section {
+    margin-bottom: 2rem;
+  }
+  
+  .education-item, .achievement-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+  }
+  
+  .education-institution {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-dates {
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-degree {
+    font-size: 1.1em;
+  }
+  

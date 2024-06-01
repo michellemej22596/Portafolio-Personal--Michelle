@@ -1,24 +1,92 @@
-// src/components/About.jsx
+// src/components/EducationAndAchievements.jsx
 import React from 'react';
-import profileImage from '../assets/foto2.jpg';
-import linkedinLogo from '../assets/linkedin.png';
-import githubLogo from '../assets/github.png';
-import './About.css';
+import './Education.css';
+
+const educationData = [
+  {
+    institution: 'Universidad del Valle de Guatemala',
+    startDate: '2022',
+    endDate: 'Actualidad',
+    degree: 'Ingeniería en Ciencias de la Computación y Tecnologías de la Información',
+  },
+  {
+    institution: 'INTECAP',
+    startDate: 'Jun 2023',
+    endDate: 'Jul 2023',
+    degree: 'Javascript Essentials (E-Learning)',
+  },
+  {
+    institution: 'INTECAP',
+    startDate: 'Jul 2022',
+    endDate: 'Oct 2022',
+    degree: 'Lenguaje de Programación PHP y Conexión a Bases de Datos',
+  },
+  {
+    institution: 'Colegio de Señoritas El Sagrado Corazón Naranjo',
+    startDate: '2017',
+    endDate: '2021',
+    degree: 'Bachillerato en Ciencias y Letras con Orientación en Computación',
+  },
+  {
+    institution: 'INTECAP',
+    startDate: 'Jun 2020',
+    endDate: 'Jul 2020',
+    degree: 'Microsoft Excel Avanzado (E-learning)',
+  }
+];
+
+const achievementsData = [
+  {
+    name: 'Beca Fundación Juan Bautista Gutiérrez',
+    year: 2022,
+  },
+  {
+    name: 'Distinción Honor al Mérito Académico',
+    year: 2022,
+  },
+  {
+    name: 'Nombramiento Estudiante Distinguida',
+    year: 2023,
+  },
+  {
+    name: 'Miembro de la Junta Directiva IEEE ',
+    year: 2024,
+  },
+  {
+    name: 'Participación en el Curso "Mujeres en Ingeniería"',
+    year: 2021,
+  },
+  {
+    name: 'Logros en competencias de fútbol femenil',
+    year: 2024, 
+  },
+];
 
 const Education = () => (
-  <div className="about-container">
-    <h2>Sobre Mí</h2>
-    <img src={profileImage} alt="Profile" className="profile-image"/>
-    <p className="description">Amabilidad, responsabilidad, honestidad, perseverancia, lealtad, generosidad, altruismo y multitasking. Me encanta interactuar con otras personas y ayudarlos en cualquier ámbito. Disfruto aprender nuevas cosas y conocer nuevos lugares. Soy extremadamente eficiente en resolver problemas y pensar en soluciones divergentes.</p>
-    <div className="social-links">
-      <a href="https://www.linkedin.com/in/michelle-mejía-villela-988a3b22b" target="_blank" rel="noopener noreferrer">
-        <img src={linkedinLogo} alt="LinkedIn" className="social-logo"/>
-        LinkedIn
-      </a>
-      <a href="https://github.com/michellemej22596" target="_blank" rel="noopener noreferrer">
-        <img src={githubLogo} alt="GitHub" className="social-logo"/>
-        GitHub
-      </a>
+  <div className="education-achievements-container">
+    <h2>Educación</h2>
+    <div className="education-section">
+      {educationData.map((edu, index) => (
+        <div key={index} className="education-item">
+          <div className="education-institution">
+            {edu.institution}
+          </div>
+          <div className="education-dates">
+            {edu.startDate} - {edu.endDate}
+          </div>
+          <div className="education-degree">
+            {edu.degree}
+          </div>
+        </div>
+      ))}
+    </div>
+    <h2>Logros</h2>
+    <div className="achievements-section">
+      {achievementsData.map((achievement, index) => (
+        <div key={index} className="achievement-item">
+          {achievement.name} ({achievement.year})
+        </div>
+      ))}
     </div>
   </div>
 );
