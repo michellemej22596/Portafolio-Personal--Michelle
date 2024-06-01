@@ -10,6 +10,7 @@ import Experience from './components/Experience';
 import About from './components/About';
 import Skills from './components/Skills';
 import Education from './components/Education';
+import ScrollToTop from './components/ScrolltoTop';
 import './index.css';
 
 const App = () => {
@@ -54,6 +55,7 @@ const App = () => {
   return (
     <div {...handlers}>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
