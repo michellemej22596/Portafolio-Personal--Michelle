@@ -1,0 +1,55 @@
+/* src/components/Projects/GeneralProjects.css */
+.general-projects-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    text-align: center;
+  }
+  
+  .general-projects-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .project-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    color: #cccccc;
+  }
+  
+  .project-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image:hover {
+    transform: scale(1.05);
+  }
+  
