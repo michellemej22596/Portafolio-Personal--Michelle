@@ -8,6 +8,8 @@ import ReactProjects from './components/Projects/ReactProjects';
 import ScratchProjects from './components/Projects/ScratchProjects';
 import Experience from './components/Experience';
 import About from './components/About';
+import Skills from './components/Skills';
+import Education from './components/Education';
 import './index.css';
 
 const App = () => {
@@ -23,14 +25,14 @@ const App = () => {
     };
 
     const navigateNext = () => {
-      const paths = ['/',   '/about', '/experience',  '/scratch-projects', '/react-projects'];
+      const paths = ['/',   '/about', '/skills', '/education', '/experience',  '/scratch-projects', '/react-projects'];
       const currentIndex = paths.indexOf(window.location.pathname);
       const nextIndex = (currentIndex + 1) % paths.length;
       navigate(paths[nextIndex]);
     };
 
     const navigatePrevious = () => {
-      const paths = ['/',   '/about', '/experience',  '/scratch-projects', '/react-projects'];
+      const paths = ['/',   '/about', '/skills', '/education', '/experience',  '/scratch-projects', '/react-projects'];
       const currentIndex = paths.indexOf(window.location.pathname);
       const previousIndex = (currentIndex - 1 + paths.length) % paths.length;
       navigate(paths[previousIndex]);
@@ -55,6 +57,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills/>} />
+        <Route path="/education" element={<Education/>} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/scratch-projects" element={<ScratchProjects />} />
         <Route path="/react-projects" element={<ReactProjects />} />

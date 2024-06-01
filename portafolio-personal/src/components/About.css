@@ -1,6 +1,94 @@
+  /* src/components/About.css */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  text-align: center;
+}
+
 .profile-image {
-    width: 200px; 
-    height: 250px;
-    border-radius: 5%; 
-    margin-bottom: 1rem;
-  }  
+  width: 200px; 
+  height: 260px;
+  border-radius: 5%; 
+  margin-bottom: 1rem;
+}  
+
+.stack-image {
+  width: 300px; 
+  height: 260px;
+  border-radius: 5%; 
+  margin-bottom: 1rem;
+} 
+  
+.description {
+  margin-bottom: 2rem;
+  text-align: justify;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.social-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+
+.skills {
+  margin-bottom: 2rem;
+}
+
+.skill {
+  margin: 1rem 0;
+}
+
+.skill-name {
+  font-size: 1.1em;
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 20px;
+  background-color: #535bf2;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1s;
+}
+
+/* Agrega animación inicial a las barras */
+@keyframes loadSkill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--skill-level);
+  }
+}
+
+.skill-level {
+  animation: loadSkill 2s ease-out;
+}
+

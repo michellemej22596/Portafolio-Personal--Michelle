@@ -5,7 +5,7 @@ import linkedinLogo from '../assets/linkedin.png';
 import githubLogo from '../assets/github.png';
 import './About.css';
 
-const About = () => (
+const Education = () => (
   <div className="about-container">
     <h2>Sobre Mí</h2>
     <img src={profileImage} alt="Profile" className="profile-image"/>
@@ -23,4 +23,4 @@ const About = () => (
   </div>
 );
 
-export default About;
+export default Education;
