@@ -23,14 +23,14 @@ const App = () => {
     };
 
     const navigateNext = () => {
-      const paths = ['/', '/react-projects', '/scratch-projects', '/experience', '/about'];
+      const paths = ['/',   '/about', '/experience',  '/scratch-projects', '/react-projects'];
       const currentIndex = paths.indexOf(window.location.pathname);
       const nextIndex = (currentIndex + 1) % paths.length;
       navigate(paths[nextIndex]);
     };
 
     const navigatePrevious = () => {
-      const paths = ['/', '/react-projects', '/scratch-projects', '/experience', '/about'];
+      const paths = ['/',   '/about', '/experience',  '/scratch-projects', '/react-projects'];
       const currentIndex = paths.indexOf(window.location.pathname);
       const previousIndex = (currentIndex - 1 + paths.length) % paths.length;
       navigate(paths[previousIndex]);
@@ -43,8 +43,8 @@ const App = () => {
   }, [navigate]);
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => navigateNext(),
-    onSwipedRight: () => navigatePrevious(),
+    onSwipedLeft: () => navigatePrevious(),
+    onSwipedRight: () => navigateNext(),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
@@ -54,10 +54,10 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/react-projects" element={<ReactProjects />} />
-        <Route path="/scratch-projects" element={<ScratchProjects />} />
-        <Route path="/experience" element={<Experience />} />
         <Route path="/about" element={<About />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/scratch-projects" element={<ScratchProjects />} />
+        <Route path="/react-projects" element={<ReactProjects />} />
       </Routes>
     </div>
   );
